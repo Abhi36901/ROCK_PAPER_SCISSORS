@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rock–Paper–Scissors: Learning AI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Rock–Paper–Scissors <span class="badge">AI</span></h1>
+    <p class="subtitle">The AI watches your patterns and adapts to beat you.</p>
+
+    <div class="controls">
+      <button class="move" data-move="rock">🪨 Rock</button>
+      <button class="move" data-move="paper">📄 Paper</button>
+      <button class="move" data-move="scissors">✂️ Scissors</button>
+      <button id="reset">Reset Memory</button>
+    </div>
+
+    <div class="result" id="result">Make a move to start!</div>
+
+    <div class="stats">
+      <div class="card">
+        <h3>Scoreboard</h3>
+        <div id="scoreboard">AI: 0 • You: 0 • Ties: 0</div>
+      </div>
+      <div class="card">
+        <h3>AI's Belief About Your Next Move</h3>
+        <div id="probs" class="probs">
+          <div><span>Rock</span><div class="bar"><div id="p-rock" class="fill" style="width:33%"></div></div></div>
+          <div><span>Paper</span><div class="bar"><div id="p-paper" class="fill" style="width:33%"></div></div></div>
+          <div><span>Scissors</span><div class="bar"><div id="p-scissors" class="fill" style="width:33%"></div></div></div>
+        </div>
+        <div class="pred" id="pred">Prediction: —</div>
+      </div>
+    </div>
+
+    <footer>
+      <small>Tip: Try forming patterns and see if the AI catches on. Then switch it up 😉</small>
+    </footer>
+  </div>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

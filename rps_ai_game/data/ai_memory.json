@@ -1,0 +1,47 @@
+{
+  "order": 1,
+  "epsilon": 0.15,
+  "history": [
+    "rock",
+    "paper",
+    "scissors",
+    "rock",
+    "paper",
+    "scissors",
+    "rock",
+    "paper",
+    "scissors",
+    "rock",
+    "paper",
+    "scissors",
+    "rock",
+    "paper",
+    "scissors",
+    "scissors",
+    "paper",
+    "paper",
+    "paper",
+    "paper",
+    "paper",
+    "paper"
+  ],
+  "transition_counts": {
+    "rock": {
+      "paper": 5
+    },
+    "paper": {
+      "scissors": 5,
+      "paper": 5
+    },
+    "scissors": {
+      "rock": 4,
+      "scissors": 1,
+      "paper": 1
+    }
+  },
+  "stats": {
+    "wins": 12,
+    "losses": 4,
+    "ties": 6
+  }
+}
